@@ -1,0 +1,40 @@
+body 				{ font-family: Calibri; margin: 0px; -ms-touch-action: none; overflow-x: hidden; overflow-y: auto; color: #FFF; }
+
+#main 				{ position: fixed; background: #88CFEB; z-index: 1; }
+
+.button				{ text-align: center; font-size: 14px; outline: 0px; font-weight: bold; text-transform:uppercase; height: 50px; background: #C5E8F5; border: 0px; color: #FFF; cursor: pointer; }
+.button:focus		{ background: #8AC9E1; }
+
+
+#existing-gestures 									 { list-style-type: none; margin-left: -40px; position: absolute; top: 80px; z-index: 99999; display: block; width: 338px; font-size: 16px; font-weight: bold; color: #FFF; text-transform:uppercase; }
+#existing-gestures li 								 { position: relative; overflow: visible; height: 50px; line-height: 50px; cursor: pointer; background: #9AD7EE; color: #fff; margin-bottom: 0px; }
+#existing-gestures li img 							 { float: right; margin-right: -28px; display: none; }
+
+#existing-gestures li .label 				 		 { font-style: italic; right: 0px; position: absolute; }
+#existing-gestures li .progress						 { float: left; overflow: visible; width: 0%; height: 50px; }
+
+#existing-gestures li.selected img.export-arrow 	 { display: none; }
+
+
+.overlay-open #existing-gestures li 							{ display: none; }
+.overlay-open #existing-gestures li.selected 					{ background: #AFDFF1; width: 88%; display: block; }
+.overlay-open #existing-gestures li.selected img 				{ background: #AFDFF1; }
+.overlay-open #existing-gestures li.selected img.export-arrow 	{ display: block; }
+.overlay-open #existing-gestures li.selected .training-label 	{ display: none; }
+.overlay-open #existing-gestures li.selected .export-gesture	{ display: block; }
+
+
+#overlay-shade 											{ display: none; top: 0px; width: 100%; height: 1000px; position: absolute; z-index: 99998; background: #000; opacity: 0.7; }
+#overlay												{ display: none; width: 910px; height: 900px; padding: 20px; position: absolute; z-index: 99999; background: #FFF; color: #34495E; top: 20px; left: 380px; }
+#overlay textarea 										{ width: 99%; height: 510px; font-size: 16px; border: 2px solid #959595; color: 5D5D5D; outline: none; }
+#overlay div 											{ padding: 0px 20px; font-size: 20px; line-height: 40px; }
+
+#close-overlay, #retrain-gesture						{ padding: 0px 25px; margin-top: 20px; background: #88CFEB; }
+#close-overlay											{ float: right; }
+
+.overlay-open #overlay-shade							{ display: block; }
+.overlay-open #overlay									{ display: block; }
+
+#output-text											{ font-size: 24px; background: #A3DAEF; width: 100%; position: absolute; height: 50px; line-height: 50px; top: 22px; text-align: center; }
+
+#render-area 											{ background: transparent; }

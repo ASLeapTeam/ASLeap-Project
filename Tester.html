@@ -1,104 +1,75 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    <link rel = "stylesheet" href = "Alphabet.css">
-</head>
-
-
-<body>
-
-    <div class="nav">
-      <div class="container">
-        <ul class = "pull-left">
-          <li><a href="https://www.mtholyoke.edu/">Mount Holyoke College</a></li>
-          <li><a href="https://sites.google.com/a/mtholyoke.edu/asl-leap-team/home">Google Site</a></li>
-        </ul>
-        <ul class ="pull-right">
-      <li><a href="home.html">Home</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class = "title">
-        <h1>Learn to Sign Your Name</h1>
-        <h2 id = "answer">Enter your name below to begin.</h2>
-        <br>
-    </div>
- 
- <div id="inputs">
-        <div class="container"> 
-                 <div class="col-md-6"> 
-                    <input type = "text" id = "name">
-                    <button onclick="getName()">Submit</button>
-                    <button onclick="skip()">Skip</button>
-                 </div>
-            </div>
-        </div>
-
-    <br>
-
-    <div class="visuals">
-        <div class="container">
-
-             <div class="row">
-                <div class="col-md-6"> 
-
-                    <iframe src="visual.html" width="500" height="300"></iframe>
-                    <iframe id = "video" width="500" height="300" frameborder="0" allowfullscreen></iframe>
-                    
-                </div>
-
-                <div class="col-md-6"> 
-                    <img id="img" width="400">
-                </div>
-        </div>
-    </div>
-
-
+    <body>
+    <input type="text" id="name"></input>
+    <button onclick="getName()">Submit</button>
+    <button onclick="skip()">Skip</button>
+    
     <script src="NameLogic.js"></script>
     <script src="http://js.leapmotion.com/0.2.0/leap.min.js"></script>
     <script src="leaptrainer.min.js"></script>
-        <script>
-        var trainer = new LeapTrainer.Controller();
+ 
+    <script>
 
+      var trainer = new LeapTrainer.Controller();
 
-
-        function check(letter){
-            switch(letter){
-                case 97: trainer.on('A', function() { confirmGesture("a"); }); break;
-                case 98: trainer.on('B', function() { confirmGesture("b"); }); break;
-                case 99: trainer.on('C', function() { confirmGesture("c"); }); break;
-                case 100: trainer.on('D', function() { confirmGesture("d"); }); break;
-                case 101: trainer.on('E', function() { confirmGesture("e"); }); break;
-                case 102: trainer.on('F', function() { confirmGesture("f"); }); break;
-                case 103: trainer.on('G', function() { confirmGesture("g"); }); break;
-                case 104: trainer.on('H', function() { confirmGesture("h"); }); break;
-                case 105: trainer.on('I', function() { confirmGesture("i"); }); break;
-                case 106: trainer.on('J', function() { confirmGesture("j"); }); break;
-                case 107: trainer.on('K', function() { confirmGesture("k"); }); break;
-                case 108: trainer.on('L', function() { confirmGesture("l"); }); break;
-                case 109: trainer.on('M', function() { confirmGesture("m"); }); break;
-                case 110: trainer.on('N', function() { confirmGesture("n"); }); break;
-                case 111: trainer.on('O', function() { confirmGesture("o"); }); break;
-                case 112: trainer.on('P', function() { confirmGesture("p"); }); break;
-                case 113: trainer.on('Q', function() { confirmGesture("q"); }); break;
-                case 114: trainer.on('R', function() { confirmGesture("r"); }); break;
-                case 115: trainer.on('S', function() { confirmGesture("s"); }); break;
-                case 116: trainer.on('T', function() { confirmGesture("t"); }); break;
-                case 117: trainer.on('U', function() { confirmGesture("u"); }); break;
-                case 118: trainer.on('V', function() { confirmGesture("v"); }); break;
-                case 119: trainer.on('W', function() { confirmGesture("w"); }); break;
-                case 120: trainer.on('X', function() { confirmGesture("x"); }); break;
-                case 121: trainer.on('Y', function() { confirmGesture("y"); }); break;
-                case 122: trainer.on('Z', function() { confirmGesture("z"); }); break;
-            }
-        }
-
-
-
+    function check(letter){
+          switch(letter){
+            document.getElementById("answer").innerHTML=("correct");
+            case 65: trainer.on('A', function() { confirmGesture("a"); }); break;
+            case 66: trainer.on('B', function() { confirmGesture("b"); }); break;
+            case 67: trainer.on('C', function() { confirmGesture("c"); }); break;
+            case 68: trainer.on('D', function() { confirmGesture("d"); }); break;
+            case 69: trainer.on('E', function() { confirmGesture("e"); }); break;
+            case 70: trainer.on('F', function() { confirmGesture("f"); }); break;
+            case 71: trainer.on('G', function() { confirmGesture("g"); }); break;
+            case 72: trainer.on('H', function() { confirmGesture("h"); }); break;
+            case 73: trainer.on('I', function() { confirmGesture("i"); }); break;
+            case 74: trainer.on('J', function() { confirmGesture("j"); }); break;
+            case 75: trainer.on('K', function() { confirmGesture("k"); }); break;
+            case 76: trainer.on('L', function() { confirmGesture("l"); }); break;
+            case 77: trainer.on('M', function() { confirmGesture("m"); }); break;
+            case 78: trainer.on('N', function() { confirmGesture("n"); }); break;
+            case 79: trainer.on('O', function() { confirmGesture("o"); }); break;
+            case 80: trainer.on('P', function() { confirmGesture("p"); }); break;
+            case 81: trainer.on('Q', function() { confirmGesture("q"); }); break;
+            case 82: trainer.on('R', function() { confirmGesture("r"); }); break;
+            case 83: trainer.on('S', function() { confirmGesture("s"); }); break;
+            case 84: trainer.on('T', function() { confirmGesture("t"); }); break;
+            case 85: trainer.on('U', function() { confirmGesture("u"); }); break;
+            case 86: trainer.on('V', function() { confirmGesture("v"); }); break;
+            case 87: trainer.on('W', function() { confirmGesture("w"); }); break;
+            case 88: trainer.on('X', function() { confirmGesture("x"); }); break;
+            case 89: trainer.on('Y', function() { confirmGesture("y"); }); break;
+            case 90: trainer.on('Z', function() { confirmGesture("z"); }); break;
+            case 97: trainer.on('A', function() { confirmGesture("a"); }); break;
+            case 98: trainer.on('B', function() { confirmGesture("b"); }); break;
+            case 99: trainer.on('C', function() { confirmGesture("c"); }); break;
+            case 100: trainer.on('D', function() { confirmGesture("d"); }); break;
+            case 101: trainer.on('E', function() { confirmGesture("e"); }); break;
+            case 102: trainer.on('F', function() { confirmGesture("f"); }); break;
+            case 103: trainer.on('G', function() { confirmGesture("g"); }); break;
+            case 104: trainer.on('H', function() { confirmGesture("h"); }); break;
+            case 105: trainer.on('I', function() { confirmGesture("i"); }); break;
+            case 106: trainer.on('J', function() { confirmGesture("j"); }); break;
+            case 107: trainer.on('K', function() { confirmGesture("k"); }); break;
+            case 108: trainer.on('L', function() { confirmGesture("l"); }); break;
+            case 109: trainer.on('M', function() { confirmGesture("m"); }); break;
+            case 110: trainer.on('N', function() { confirmGesture("n"); }); break;
+            case 111: trainer.on('O', function() { confirmGesture("o"); }); break;
+            case 112: trainer.on('P', function() { confirmGesture("p"); }); break;
+            case 113: trainer.on('Q', function() { confirmGesture("q"); }); break;
+            case 114: trainer.on('R', function() { confirmGesture("r"); }); break;
+            case 115: trainer.on('S', function() { confirmGesture("s"); }); break;
+            case 116: trainer.on('T', function() { confirmGesture("t"); }); break;
+            case 117: trainer.on('U', function() { confirmGesture("u"); }); break;
+            case 118: trainer.on('V', function() { confirmGesture("v"); }); break;
+            case 119: trainer.on('W', function() { confirmGesture("w"); }); break;
+            case 120: trainer.on('X', function() { confirmGesture("x"); }); break;
+            case 121: trainer.on('Y', function() { confirmGesture("y"); }); break;
+            case 122: trainer.on('Z', function() { confirmGesture("z"); }); break;
+      }
+    }
 
     // save the value of the gesture "A"
     trainer.fromJSON('{"name":"A","pose":false,"data":[[{"x":0.5253169474217124,"y":0.2885067162559162,"z":0.4252747052046899,"stroke":1},{"x":0.0792727343149775,"y":0.1845273489598993,"z":0.016348681749924543,"stroke":1},{"x":-0.3667714787917574,"y":0.0805479816638821,"z":-0.39257734170484093,"stroke":1},{"x":-0.08705710833359387,"y":0.07588827528901054,"z":-0.11988008426229607,"stroke":1},{"x":0.35529471367288434,"y":0.09348541424349699,"z":0.305564210323939,"stroke":1},{"x":0.24590628733486353,"y":0.03284991044882912,"z":0.2235711067352879,"stroke":1},{"x":-0.20793447540994986,"y":-0.07662635973741572,"z":-0.17521599168331464,"stroke":1},{"x":-0.2615898085278632,"y":-0.10459290582513281,"z":-0.21890881122540992,"stroke":1},{"x":0.19224524089701434,"y":-0.029193866858229334,"z":0.1877069464183393,"stroke":1},{"x":-0.4746830525782876,"y":-0.5453925144402565,"z":-0.25188342155631926,"stroke":1}]]}');

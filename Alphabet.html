@@ -28,12 +28,23 @@
 		<br>
 	</div>
 
-	<div>
-	 <iframe src="visual.html" width="500" height="300"></iframe>
-	 <img id = "img" src= "http://www.jenriggio.com/MULTIMEDIA_ASL/asl_alphabet/large_letters/LARGEA.GIF"></a>
-	</div>
+	<div class="visuals">
+		<div class="container">
 
-	<button onclick="skip()">Skip</button>
+			 <div class="row">
+            	<div class="col-md-6"> 
+
+			 		<iframe src="visual.html" width="500" height="300"></iframe>
+			 		<iframe id = "video" width="500" height="300" frameborder="0" allowfullscreen></iframe>
+	 				
+			 	</div>
+
+			 	<div class="col-md-6"> 
+			 		<img id="img" width="400">
+			 		<button onclick="skip()">Skip</button>
+			 	</div>
+		</div>
+	</div>
 
 
 	<script src="AlphabetLogic.js"></script>
